@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+aside {
+  width: 280px;
+  flex-shrink: 0;
+  background: green;
+  max-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+aside::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+aside > header {
+  height: 80px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+#dashboard__container {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  background: red;
+}
+#dashboard__container > header {
+  width: 100%;
+  height: 80px;
+  background: aqua;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin-bottom: 30px;
+}
+#dashboard__container > main {
+  background: beige;
+}
+
+/*# sourceMappingURL=style.css.map */
