@@ -1,0 +1,9 @@
+@import "./variable";
+
+.title_aside {
+    font-size: 12px;
+    font-weight: 700;
+    color: $title;
+    line-height: $lineHeightSm;
+    text-transform: uppercase;
+}
