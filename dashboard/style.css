@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,12 +17,66 @@ input {
   outline: none;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .title_aside {
   font-size: 12px;
   font-weight: 700;
   color: #BDC7D3;
   line-height: 15px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  transition: 0.3s;
+}
+.nav_item i {
+  display: inline-block;
+  width: 22px;
+  font-size: 18px;
+}
+.nav_item span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+.nav_item:hover {
+  color: #0d6efd;
+}
+
+.aside--item ul {
+  display: grid;
+  gap: 16px;
+  padding-left: 30px;
+  margin: 16px 0;
+}
+.aside--item ul a {
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+.aside--item ul a::before {
+  content: "◇";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 body {
@@ -55,6 +110,13 @@ aside > header {
   justify-content: space-between;
   align-items: center;
 }
+aside .aside_content {
+  padding: 20px 20px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 #dashboard__container {
   width: 100%;
   overflow: auto;

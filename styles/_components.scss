@@ -1,9 +1,66 @@
 @import "./variable";
 
+$iconWidth: 22px;
+$gapNavItem: 8px;
+
 .title_aside {
     font-size: 12px;
     font-weight: 700;
     color: $title;
     line-height: $lineHeightSm;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.nav_item {
+    display: flex;
+    align-items: center;
+    gap: $gapNavItem;
+
+    padding: 14px 0;
+
+    transition: .3s;
+
+    i {
+        display: inline-block;
+        width: $iconWidth;
+        font-size: 18px;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .1px;
+    }
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+.aside--item {
+    ul {
+        display: grid;
+        gap: 16px;
+        padding-left: calc($gapNavItem + $iconWidth);
+        margin: 16px 0;
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+
+            position: relative;
+
+            &::before {
+                content: "◇";
+
+                position: absolute;
+                left: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
 }

@@ -4,7 +4,6 @@
 
 body {
     height: 100vh;
-
     display: flex;
 }
 
@@ -41,7 +40,13 @@ aside {
         align-items: center;
     }
 
-    >section {}
+    .aside_content {
+        padding: 20px 20px 30px 34px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
 }
 
 #dashboard__container {
